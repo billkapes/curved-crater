@@ -1,0 +1,74 @@
+---
+import MainLayout from '../../layouts/MainLayout.astro';
+import { books } from '../../data/books';
+
+export function getStaticPaths() {
+  return [
+    { params: { slug: "flight-level-heist" }},
+    
+  ];
+}
+
+const { slug } = Astro.params;
+const book = books.find((b) => b.slug === slug);
+
+if (!book) {
+  throw new Error(`Book not found: ${slug}`);
+}
+---
+
+<MainLayout title={`${book.title} | John Doe`}>
+  <section class="book-detail">
+    <img src={book.image} alt={book.title} />
+    <div class="info">
+      <h1>{book.title}</h1>
+      <p class="desc">{book.longDescription}</p>
+      <a href={book.buyLink} class="buy-button" target="_blank">Buy Now</a>
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+.book-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  .book-detail {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+.book-detail img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+}
+
+.info h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.desc {
+  color: #ccc;
+  line-height: 1.6;
+}
+
+.buy-button {
+  display: inline-block;
+  margin-top: 1rem;
+  background: #cc0000;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: bold;
+}
+</style>

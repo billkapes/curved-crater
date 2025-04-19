@@ -1,0 +1,33 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import BookCard from '../components/BookCard.astro';
+import { books } from '../data/books';
+
+---
+
+<MainLayout title="Books | JBJefferson">
+  <section>
+    <h1>Books by John Blanchard Jefferson</h1>
+    <div class="books-grid">
+      {books.map(book => (
+        <BookCard {...book} />
+      ))}
+    </div>
+  </section>
+</MainLayout>
+
+<style>
+h1 {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  margin-bottom: 2rem;
+}
+
+.books-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: auto;
+}
+</style>

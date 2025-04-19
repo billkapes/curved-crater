@@ -1,0 +1,52 @@
+---
+const { title, image, description, link } = Astro.props;
+---
+
+<article class="book-card">
+  <img src={image} alt={title} loading="lazy" />
+  <h2>{title}</h2>
+  <p>{description}</p>
+  {link && <a href={link} class="read-more">Read More</a>}
+</article>
+
+<style>
+.book-card {
+  background: #1a1a1a;
+  border-radius: 12px;
+  overflow: hidden;
+  padding: 1rem;
+  color: #fff;
+  transition: transform 0.2s ease;
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+}
+
+.book-card img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.book-card h2 {
+  font-size: 1.25rem;
+  margin: 0.5rem 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.book-card p {
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 0.5rem;
+  color: #cc0000;
+  font-weight: bold;
+  text-decoration: none;
+}
+</style>

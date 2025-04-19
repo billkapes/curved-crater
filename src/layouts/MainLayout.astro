@@ -1,0 +1,119 @@
+---
+// src/layouts/MainLayout.astro
+const { title = "Author Website" } = Astro.props;
+---
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>{title}</title>
+        <link rel="stylesheet" href="/styles/global.css" />
+    </head>
+    <body>
+        <header>
+            <h1 class="header-title">John Blanchard Jefferson</h1>
+            <nav>
+                <a href="/">
+                    <ion-icon name="home"></ion-icon>
+                    <span class="logo">J.B.Jefferson</span>
+                    
+                </a>
+                <ul>
+                    <li><a href="/books">Books</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/news">News</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+            <slot />
+        </main>
+
+        <footer>
+            <p>© {new Date().getFullYear()} John Blanchard Jefferson. All rights reserved.</p>
+        </footer>
+
+        <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@latest/dist/ionicons/ionicons.js"></script>
+    </body>
+</html>
+
+<style>
+    body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: #0d0d0d;
+        color: #f5f5f5;
+        max-width: 1200px; /* Reduced width */
+        margin: auto; /* Center the content */
+    }
+
+    header {
+        background: #1a1a1a;
+        padding: 1rem 2rem;
+    }
+
+    h1,
+    h2,
+    h3 {
+        font-family: "Playfair Display", serif;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .header-title {
+        font-size: 3rem;
+        color: #cc0000;
+        margin: 0;
+        text-align: center;
+    }
+    .logo {
+        font-family: "Playfair Display", serif;
+        font-size: 1.5rem;
+        color: white;
+        text-decoration: none;
+        /* flex-grow: 1; */
+    }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 2rem;
+        /* flex-grow: 0.5; */
+    }
+
+    nav ul li {
+        font-size: 1.2rem;
+    }
+
+    nav a {
+        color: #f5f5f5;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    nav a:hover {
+        color: #cc0000;
+    }
+
+    main {
+        padding: 2rem;
+        max-width: 1000px;
+        margin: auto;
+    }
+
+    footer {
+        background: #1a1a1a;
+        padding: 2rem;
+        text-align: center;
+        font-size: 0.875rem;
+        color: #888;
+    }
+</style>
