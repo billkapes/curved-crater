@@ -5,7 +5,10 @@ import { books } from '../../data/books';
 export function getStaticPaths() {
   return [
     { params: { slug: "flight-level-heist" }},
-    
+    { params: { slug: "timid-revenge" }},
+    { params: { slug: "drug-payback" }},
+    { params: { slug: "crooked-idols" }}
+
   ];
 }
 
@@ -22,7 +25,14 @@ if (!book) {
     <img src={book.image} alt={book.title} />
     <div class="info">
       <h1>{book.title}</h1>
-      <p class="desc">{book.longDescription}</p>
+      <p class="desc">
+        {book.longDescription
+        .trim()
+        .split('\n')
+        .map((paragraph) => (
+          <p >{paragraph}</p>
+        ))}
+      </p>
       <a href={book.buyLink} class="buy-button" target="_blank">Buy Now</a>
     </div>
   </section>

@@ -1,4 +1,6 @@
 ---
+import Hero from "../components/Hero.astro";
+
 // src/layouts/MainLayout.astro
 const { title = "Author Website" } = Astro.props;
 ---
@@ -12,7 +14,10 @@ const { title = "Author Website" } = Astro.props;
     </head>
     <body>
         <header>
+            <hr class="header-top" />
+
             <h1 class="header-title">John Blanchard Jefferson</h1>
+            <hr class="header-divider" />
             <nav>
                 <a href="/">
                     <ion-icon name="home"></ion-icon>
@@ -26,6 +31,7 @@ const { title = "Author Website" } = Astro.props;
                     <li><a href="/contact">Contact</a></li>
                 </ul>
             </nav>
+            
         </header>
 
         <main>
@@ -47,13 +53,13 @@ const { title = "Author Website" } = Astro.props;
         font-family: "Inter", sans-serif;
         background: #0d0d0d;
         color: #f5f5f5;
-        max-width: 1200px; /* Reduced width */
+        max-width: 1800px; /* Reduced width */
         margin: auto; /* Center the content */
     }
 
     header {
         background: #1a1a1a;
-        padding: 1rem 2rem;
+        padding: 0rem 0rem;
     }
 
     h1,
@@ -64,15 +70,18 @@ const { title = "Author Website" } = Astro.props;
 
     nav {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
         align-items: center;
     }
 
     .header-title {
         font-size: 3rem;
         color: #cc0000;
-        margin: 0;
+        margin: auto;
         text-align: center;
+        
+        font-family: "TopGun";
+        font-weight: 100;
     }
     .logo {
         font-family: "Playfair Display", serif;
@@ -85,7 +94,7 @@ const { title = "Author Website" } = Astro.props;
     nav ul {
         list-style: none;
         display: flex;
-        gap: 2rem;
+        gap: 2.5rem;
         /* flex-grow: 0.5; */
     }
 
@@ -115,5 +124,20 @@ const { title = "Author Website" } = Astro.props;
         text-align: center;
         font-size: 0.875rem;
         color: #888;
+    }
+
+    .header-divider {
+        border: none;
+        border-top: 10px solid rgb(2, 2, 231) !important;
+        margin: auto;
+        padding: 0.5rem;
+    }
+
+    .header-top {
+        border: none;
+        border-top: 4px solid #cc0000 !important;
+        margin: auto;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
     }
 </style>
