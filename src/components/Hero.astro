@@ -2,25 +2,46 @@
 // src/components/Hero.astro
 ---
 <section class="hero">
-    <h1>John Doe</h1>
+    <h1>Welcome to the Official Homepage of John Blanchard Jefferson's Books</h1>
     <p>Master of Modern Thrillers</p>
     <a href="/books" class="cta">Explore the Books</a>
-  </section>
+</section>
   
-  <style>
-  .hero {
-    background: url('/hero.jpg') no-repeat center center/cover;
-    color: black;
-    padding: 6rem 2rem;
+<style>
+.hero {
+    background: url('/jefferson.jpg') no-repeat center center/cover;
+    color: white;
+    padding: 8rem 1rem;
+    text-align: right;
+    border: #0033cc 2px solid;
+    box-shadow: 0 0 20px 5px rgba(0, 51, 204, 0.8);
+}
+
+.hero h1 {
+    font-size: 2rem; /* Increased font size */
+    max-width: 50%; /* Contain the heading to the right side */
+    margin-left: auto; /* Push the heading to the right */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Adds a subtle shadow */
     text-align: center;
-  }
-  .cta {
+  ;
+
+}
+
+.hero p {
+    text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.7); /* Keeps the shadow */
+    text-align: right;
+
+}
+
+.cta {
     background: #cc0000;
     color: white;
-    padding: 0.75rem 1.5rem;
+    padding: .75rem 1.5rem;
     text-decoration: none;
     font-weight: bold;
     border-radius: 4px;
-  }
-  </style>
-  
+    
+
+    
+}
+</style>
