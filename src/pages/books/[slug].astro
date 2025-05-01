@@ -22,7 +22,15 @@ if (!book) {
 
 <MainLayout title={`${book.title} | John Doe`}>
   <section class="book-detail">
-    <img src={book.image} alt={book.title} />
+    <div class="image-and-button">
+      <img src={book.image} alt={book.title} />
+      {book.buyLink !== "unavailable" ? (
+        <a href={book.buyLink} class="buy-button" target="_blank">Buy Now</a>
+      ) : (
+        <p>Coming Soon</p>
+      )}
+    </div>
+    
     <div class="info">
       <h1>{book.title}</h1>
       <p class="desc">
@@ -30,10 +38,9 @@ if (!book) {
         .trim()
         .split('\n')
         .map((paragraph) => (
-          <p >{paragraph}</p>
+          <p>{paragraph}</p>
         ))}
       </p>
-      <a href={book.buyLink} class="buy-button" target="_blank">Buy Now</a>
     </div>
   </section>
 </MainLayout>
@@ -54,10 +61,22 @@ if (!book) {
   }
 }
 
+.image-and-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex: 2; /* Increase the size of this container */
+}
+
 .book-detail img {
   width: 100%;
-  max-width: 300px;
+  max-width: 500px;
   border-radius: 12px;
+}
+
+.info {
+  flex: 2; /* Allow the info section to take up less space */
 }
 
 .info h1 {
@@ -73,7 +92,6 @@ if (!book) {
 
 .buy-button {
   display: inline-block;
-  margin-top: 1rem;
   background: #cc0000;
   color: white;
   padding: 0.75rem 1.5rem;

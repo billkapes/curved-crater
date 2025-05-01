@@ -15,7 +15,7 @@ export const books = [
 
         "Flight Level Heist" is a pulse-pounding thriller of survival, strategy, and redemtion - a story of how ordinarry people become extraordinary when pushed to their absolute limits.
       `,
-    buyLink: "https://example.com/shadow-directive",
+    buyLink: "https://www.amazon.com/Flight-Level-Heist-Blanchard-Jefferson/dp/B0F1LKH8HH/",
     link: "/books/flight-level-heist",
   },
   {
@@ -36,7 +36,7 @@ export const books = [
 
           A fascinating exploration of small-town dynamics and the hidden strength of those society deems insignificant, this novel reminds us that the quiet ones often observe the most—and sometimes, they're taking notes.
         `,
-    buyLink: "https://example.com/shadow-directive",
+    buyLink: "unavailable",
     link: "/books/timid-revenge",
   },
   {
@@ -57,7 +57,7 @@ export const books = [
 
           From small-town America to the shadowy corners of Southeast Asia, "Drug Payback" is a heart-pounding thriller about one man's relentless quest for justice in a world where pharmaceutical greed, corruption, and indifference to human suffering have become the prescription of choice. It's a story that asks: When the system fails, what price are you willing to pay for justice? 
         `,
-    buyLink: "https://example.com/shadow-directive",
+    buyLink: "unavailable",
     link: "/books/drug-payback",
   },
   {
@@ -76,7 +76,7 @@ export const books = [
 
           "Crooked Idols" explores the dark underbelly of power and privilege, the resilience of survivors, and the sometimes murky line between justice and vengeance. This pulse-pounding thriller examines how far someone will go to protect family, what true justice looks like for victims of unspeakable crimes, and the unexpected ways our pasts can collide with our present. 
         `,
-    buyLink: "https://example.com/shadow-directive",
+    buyLink: "unavailable",
     link: "/books/crooked-idols",
   },
 ];

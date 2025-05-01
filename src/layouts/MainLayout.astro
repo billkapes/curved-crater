@@ -10,6 +10,24 @@ const { title = "Author Website" } = Astro.props;
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>{title}</title>
+        <meta name="description" content="Welcome to the official website of John Blanchard Jefferson's Books, featuring books, biography, and contact information." />
+        <meta name="keywords" content="John Blanchard Jefferson, author, books, biography, contact" />
+        <meta name="author" content="John Blanchard Jefferson" />
+        <meta name="robots" content="index, follow" />
+
+        <!-- Open Graph Meta Tags -->
+        <meta property="og:title" content="John Blanchard Jefferson - Author Website" />
+        <meta property="og:description" content="Explore the works and life of John Blanchard Jefferson, a renowned author." />
+        <meta property="og:image" content="/profile.jpg" />
+        <meta property="og:url" content="https://www.johnblanchardjeffersonbooks.com" />
+        <meta property="og:type" content="website" />
+
+        <!-- Twitter Card Meta Tags -->
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="John Blanchard Jefferson - Author Website" />
+        <meta name="twitter:description" content="Discover the books and biography of John Blanchard Jefferson." />
+        <meta name="twitter:image" content="/profile.jpg" />
+
         <link rel="stylesheet" href="/styles/global.css" />
     </head>
     <body>
