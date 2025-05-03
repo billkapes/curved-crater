@@ -1,11 +1,16 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
+import HeroNew from "../components/HeroNew.astro";
 ---
 
-<MainLayout title="Home | JBJefferson">
-  <Hero />
-
+<MainLayout title="Home | John Blanchard Jefferson">
+  <!-- <Hero /> -->
+  <HeroNew 
+    heading="Welcome to the Official Homepage of John Blanchard Jefferson's Books"
+    buttonText="shop now"
+    buttonLink="/books"
+  />
   <br />
 
   <div class="socials">

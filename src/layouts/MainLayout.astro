@@ -2,7 +2,7 @@
 import Hero from "../components/Hero.astro";
 
 // src/layouts/MainLayout.astro
-const { title = "Author Website" } = Astro.props;
+const { title = "Home | John Blanchard Jefferson" } = Astro.props;
 ---
 
 <html lang="en">
@@ -64,7 +64,6 @@ const { title = "Author Website" } = Astro.props;
 </html>
 
 <style>
-    /* General Styles */
     body {
         font-family: "Roboto", sans-serif;
         background: #07071b;
@@ -79,7 +78,7 @@ const { title = "Author Website" } = Astro.props;
         background: linear-gradient(270deg, #0c0c0c, #272727);
 
         padding: 0rem 0;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         font-size: 1.5rem;
     }
 
@@ -91,7 +90,7 @@ const { title = "Author Website" } = Astro.props;
 
     .header-title {
         font-size: 4rem;
-        color: white; /* Corrected the color property */
+        color: white;
         margin: auto;
         text-align: center;
         font-family: "Playfair Display", serif;
@@ -114,8 +113,6 @@ const { title = "Author Website" } = Astro.props;
         align-items: center;
         gap: 2rem;
         border-top: 3px solid #cc0000;
-    box-shadow: 0 0 10px 2px rgba(0, 51, 204, 0.8);
-
         border-bottom: 3px solid #0033cc;
     }
 
@@ -128,7 +125,7 @@ const { title = "Author Website" } = Astro.props;
     }
 
     nav a:hover {
-        color: #b30000;
+        color: #ff0000;
     }
 
     nav a::after {
@@ -136,7 +133,7 @@ const { title = "Author Website" } = Astro.props;
         display: block;
         width: 0;
         height: 2px;
-        background: #b30000;
+        background: #ff0000;
         transition: width 0.3s ease;
         position: absolute;
         bottom: -5px;
@@ -150,7 +147,7 @@ const { title = "Author Website" } = Astro.props;
     nav ul {
         list-style: none;
         display: flex;
-        gap: 2rem;
+        gap: 3rem;
     }
 
     main {
@@ -165,8 +162,6 @@ const { title = "Author Website" } = Astro.props;
         text-align: center;
         font-size: 0.875rem;
         color: #ccc;
-        /* border-top: 3px solid #cc0000; */
-        /* box-shadow: 0 0 10px 2px rgba(0, 51, 204, 0.8); */
     }
 
     footer p {
@@ -181,7 +176,7 @@ const { title = "Author Website" } = Astro.props;
 
     .header-divider {
         border: none;
-        border-top: 8px solid #0033cc; /* Softer blue */
+        border-top: 8px solid #0033cc;
         margin: auto;
         padding: 0.5rem;
 
@@ -190,11 +185,11 @@ const { title = "Author Website" } = Astro.props;
 
     .header-top {
         border: none;
-        border-top: 4px solid #b30000; /* Muted red */
+        border-top: 4px solid #cc0000;
         margin: auto;
         margin-bottom: 0rem;
         padding: 0rem;
-    box-shadow: 0 0 10px 2px rgba(0, 51, 204, 0.8);
+    box-shadow: 0 2px 4px rgba(0, 51, 204, 0.8);
 
     }
 
