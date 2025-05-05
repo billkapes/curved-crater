@@ -1,5 +1,5 @@
 ---
-const { buttonText, buttonLink } = Astro.props;
+
 ---
 
 <style>
@@ -15,7 +15,10 @@ const { buttonText, buttonLink } = Astro.props;
   justify-content: space-between;
   padding: 2rem;
   color: white;
-  border: 2px solid #0033cc;
+  /* border: 2px solid #0033cc; */
+  /* border: 4mm ridge #0033cc; */
+  border: 0.5rem solid #0033cc;
+  border-radius: 1rem;
 }
 
 .hero-content {
@@ -31,7 +34,7 @@ const { buttonText, buttonLink } = Astro.props;
   font-size: 2rem;
   font-weight: bold;
   text-align: right;
-  background-color: rgba(0, 0, 0, 0.4);
+  background-color: rgba(0, 0, 0, 0.6);
   padding-left: 1rem;
   padding-right: 1rem;
 }
@@ -70,7 +73,7 @@ const { buttonText, buttonLink } = Astro.props;
   <div class="hero-content">
     <div class="heading">Welcome to the Official Homepage of<br />John Blanchard Jefferson's Books</div>
     <div class="button-wrapper">
-      <a href={buttonLink} class="button">{buttonText}
+      <a href="https://www.amazon.com/stores/John-Blanchard-Jefferson/author/B0F1F13GLY" class="button">Shop Amazon
         <ion-icon size="large" name="logo-amazon" style="position: relative; top: 4px;"></ion-icon>
       </a>
     </div>

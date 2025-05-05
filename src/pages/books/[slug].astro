@@ -25,7 +25,10 @@ if (!book) {
     <div class="image-and-button">
       <img src={book.image} alt={book.title} />
       {book.buyLink !== "unavailable" ? (
-        <a href={book.buyLink} class="buy-button" target="_blank">Buy Now</a>
+        <a href={book.buyLink} class="buy-button" target="_blank">
+          Buy Now
+          <ion-icon size="medium" name="logo-amazon" style="position: relative; top: 4px;"></ion-icon>
+        </a>
       ) : (
         <p>Coming Soon</p>
       )}
@@ -33,14 +36,14 @@ if (!book) {
     
     <div class="info">
       <h1>{book.title}</h1>
-      <p class="desc">
+      
         {book.longDescription
         .trim()
         .split('\n')
         .map((paragraph) => (
-          <p>{paragraph}</p>
+          <p class="desc">{paragraph}</p>
         ))}
-      </p>
+      
     </div>
   </section>
 </MainLayout>
@@ -87,16 +90,20 @@ if (!book) {
 
 .desc {
   color: #ccc;
-  line-height: 1.6;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  background-color: rgba(0, 0, 0, 0.3);
+
 }
 
 .buy-button {
   display: inline-block;
-  background: #cc0000;
-  color: white;
+  background: #FF9900;
+  color: black;
   padding: 0.75rem 1.5rem;
   text-decoration: none;
   border-radius: 4px;
   font-weight: bold;
+  font-size: 1.5rem;;
 }
 </style>
