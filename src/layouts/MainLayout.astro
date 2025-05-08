@@ -38,7 +38,7 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
             <!-- <hr class="header-divider" /> -->
             <nav aria-label="Main navigation">
                 <a href="/" aria-label="Home">
-                    <ion-icon name="home"></ion-icon>
+                    <!-- <ion-icon name="home"></ion-icon> -->
                     <span class="logo">Home</span>
                 </a>
                 <ul>
@@ -50,7 +50,7 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
             
         </header>
 
-        <main>
+        <main class="fade">
             <slot />
         </main>
 
@@ -60,6 +60,32 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
 
         <script type="module" src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
+
+        <script>
+            // Add fade-in effect on page load
+            document.addEventListener('DOMContentLoaded', () => {
+                const main = document.querySelector('main');
+                if (main) {
+                    main.classList.add('fade-in');
+                }
+            });
+
+            // Add fade-out effect on navigation
+            document.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault();
+                    const href = link.getAttribute('href');
+                    const main = document.querySelector('main');
+                    if (href && main) {
+                        main.classList.remove('fade-in'); // Remove fade-in class if present
+                        main.classList.add('fade-out');
+                        setTimeout(() => {
+                            window.location.href = href;
+                        }, 300); // Match the CSS transition duration
+                    }
+                });
+            });
+        </script>
     </body>
 </html>
 
@@ -71,11 +97,17 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
         max-width: 1920px;
         margin: auto;
         line-height: 1.6;
+        transition: opacity 0.5s ease-in-out; /* Add transition for fade effect */
+        opacity: 1;
+    }
+
+    body.fade-out {
+        opacity: 0; /* Fade out effect */
     }
 
     header {
         /* background: #1a1a1a; */
-        background: linear-gradient(270deg, #141414, #272727);
+        background: linear-gradient(270deg, #11102e, #172447);
 
         padding: 0rem 0;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -154,10 +186,20 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
         padding: 2rem;
         max-width: 1200px;
         margin: auto;
+        transition: opacity 0.3s ease-out; /* Add transition for fade effect */
+        opacity: 0; /* Start hidden */
+    }
+
+    main.fade-in {
+        opacity: 1; /* Fade in effect */
+    }
+
+    main.fade-out {
+        opacity: 0; /* Fade out effect */
     }
 
     footer {
-        background: linear-gradient(90deg, #111111, #161616);
+        background: linear-gradient(90deg, #0c0c1a, #161627);
         padding: 2rem;
         text-align: center;
         font-size: 0.875rem;
@@ -185,7 +227,7 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
 
     .header-top {
         border: none;
-        border-top: 4px solid #cc0000;
+        border-top: 0px solid #cc0000;
         margin: auto;
         margin-bottom: 0rem;
         padding: 0rem;
@@ -208,4 +250,6 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
             padding: 1rem;
         }
     }
+
+   
 </style>
