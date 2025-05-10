@@ -21,7 +21,7 @@ export const books = [
   {
     slug: "timid-revenge",
     title: "Timid Revenge",
-    image: "/books/coverplaceholder.jpg",
+    image: "/books/coverplaceholder.png",
     description: "Timid Revenge is a gripping tale of long-simmering vengeance and small-town corruption set in the fictional town of Riverdale, Missouri.",
     longDescription: `
           Timid Revenge is a gripping tale of long-simmering vengeance and small-town corruption set in the fictional town of Riverdale, Missouri. This suspenseful thriller follows Oscar Martin, a mild-mannered shopkeeper who has spent decades being overlooked, underestimated, and bullied by the town's powerful elite. 
@@ -42,7 +42,7 @@ export const books = [
   {
     slug: "drug-payback",
     title: "Drug Payback",
-    image: "/books/coverplaceholder.jpg",
+    image: "/books/coverplaceholder.png",
     description: "In the quiet town where everyone knows everyone's business, private investigator Dave Harper never expected to be pulled into a life-altering conspiracy.",
     longDescription: `
           In the quiet town where everyone knows everyone's business, private investigator Dave Harper never expected to be pulled into a life-altering conspiracy. But when his niece Emily dies from what officials call "just another fentanyl overdose," Dave's instincts tell him something doesn't add up. 
@@ -63,7 +63,7 @@ export const books = [
   {
     slug: "crooked-idols",
     title: "Crooked Idols",
-    image: "/books/coverplaceholder.jpg",
+    image: "/books/coverplaceholder.png",
     description: "In this gripping thriller, a chance rescue on a remote Georgia island unravels a conspiracy that reaches the highest levels of power and wealth in America. ",
     longDescription: `
           In this gripping thriller, a chance rescue on a remote Georgia island unravels a conspiracy that reaches the highest levels of power and wealth in America. 
