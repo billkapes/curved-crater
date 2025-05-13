@@ -36,7 +36,11 @@ import MainLayout from '../layouts/MainLayout.astro';
 @media (min-width: 768px) {
   .about-author {
     flex-direction: row;
-    align-items: flex-start;
+    align-items: flex-start; /* Align items at the top */
+  }
+
+  .about-author img {
+    margin-top: 2.5rem; /* Adjust as needed for precise alignment */
   }
 }
 
