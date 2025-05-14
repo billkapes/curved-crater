@@ -4,6 +4,7 @@ import Hero from "../components/Hero.astro";
 import HeroNew from "../components/HeroNew.astro";
 import { Image } from "astro:assets";
 import flhpost from "../assets/flhpost.jpg";
+import trhpost from "../assets/trpost.jpg";
 ---
 
 <MainLayout title="Home | John Blanchard Jefferson">
@@ -49,11 +50,21 @@ import flhpost from "../assets/flhpost.jpg";
 
   <div style="display: flex; justify-content: center;">
     <Image
+      src={trhpost}
+      alt="Flight Level Heist Available Now"
+      style="max-width: 100%; height: auto;"
+    />
+  </div>
+  <br />
+  <div style="display: flex; justify-content: center;">
+    <Image
       src={flhpost}
       alt="Flight Level Heist Available Now"
       style="max-width: 100%; height: auto;"
     />
   </div>
+
+
   <style>
     .socials {
       display: flex;

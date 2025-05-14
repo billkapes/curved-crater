@@ -21,7 +21,7 @@ export const books = [
   {
     slug: "timid-revenge",
     title: "Timid Revenge",
-    image: "/books/coverplaceholder.png",
+    image: "/books/trcover.jpg",
     description: "Timid Revenge is a gripping tale of long-simmering vengeance and small-town corruption set in the fictional town of Riverdale, Missouri.",
     longDescription: `
           Timid Revenge is a gripping tale of long-simmering vengeance and small-town corruption set in the fictional town of Riverdale, Missouri. This suspenseful thriller follows Oscar Martin, a mild-mannered shopkeeper who has spent decades being overlooked, underestimated, and bullied by the town's powerful elite. 
@@ -36,7 +36,7 @@ export const books = [
 
           A fascinating exploration of small-town dynamics and the hidden strength of those society deems insignificant, this novel reminds us that the quiet ones often observe the most—and sometimes, they're taking notes.
         `,
-    buyLink: "unavailable",
+    buyLink: "https://www.amazon.com/Timid-Revenge-John-Blanchard-Jefferson-ebook/dp/B0F8CT9CPZ",
     link: "/books/timid-revenge",
   },
   {
