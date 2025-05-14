@@ -29,6 +29,7 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
         <meta name="twitter:image" content="/profile.jpg" />
 
         <link rel="stylesheet" href="/styles/global.css" />
+        <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
     </head>
     <body>
         <header>
@@ -82,6 +83,17 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
                         setTimeout(() => {
                             window.location.href = href;
                         }, 300); // Match the CSS transition duration
+                    }
+                });
+            });
+
+            document.addEventListener('DOMContentLoaded', () => {
+                const links = document.querySelectorAll('nav a');
+                const currentPath = window.location.pathname;
+
+                links.forEach(link => {
+                    if (link.getAttribute('href') === currentPath) {
+                        link.classList.add('active');
                     }
                 });
             });
@@ -157,7 +169,7 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
     }
 
     nav a:hover {
-        color: #ff0000;
+        /* color: #ff0000; */
     }
 
     nav a::after {
@@ -174,6 +186,10 @@ const { title = "Home | John Blanchard Jefferson" } = Astro.props;
 
     nav a:hover::after {
         width: 100%;
+    }
+
+    nav a.active::after {
+        width: 100%; /* Same underline effect as hover */
     }
 
     nav ul {

@@ -16,7 +16,7 @@ const { title, image, description, link } = Astro.props;
   overflow: hidden;
   padding: 1rem;
   color: #fff;
-  transition: transform 0.2s ease;
+  /* transition: transform 0.2s ease; */
   box-shadow: 0 0 12px rgba(0,0,0,0.5);
   border: #0033cc 1px solid;
   display: flex;
@@ -24,7 +24,7 @@ const { title, image, description, link } = Astro.props;
 }
 
 .book-card:hover {
-  transform: translateY(-5px);
+  /* transform: translateY(-5px); */
 }
 
 .book-card img {
@@ -52,5 +52,9 @@ const { title, image, description, link } = Astro.props;
   font-weight: bold;
   text-decoration: none;
   font-size: 1.3rem;
+}
+
+.read-more:hover {
+  color: #910000;
 }
 </style>
