@@ -5,11 +5,12 @@ import HeroNew from "../components/HeroNew.astro";
 import { Image } from "astro:assets";
 import flhpost from "../assets/flhpost.jpg";
 import trhpost from "../assets/trpost.jpg";
+import cimockup from "../assets/cimockup.jpg";
 ---
 
 <MainLayout title="Home | John Blanchard Jefferson">
-  <!-- <Hero /> -->
   <HeroNew />
+  
   <br />
 
   <div class="socials">
@@ -46,12 +47,21 @@ import trhpost from "../assets/trpost.jpg";
       <ion-icon size="large" name="logo-tiktok"></ion-icon>
     </a>
   </div>
+
   <br />
 
   <div style="display: flex; justify-content: center;">
     <Image
+      src={cimockup}
+      alt="Crooked Idols Available Now"
+      style="max-width: 100%; height: auto;"
+    />
+  </div>
+  <br />
+  <div style="display: flex; justify-content: center;">
+    <Image
       src={trhpost}
-      alt="Flight Level Heist Available Now"
+      alt="Timid Revenge Available Now"
       style="max-width: 100%; height: auto;"
     />
   </div>
@@ -63,31 +73,29 @@ import trhpost from "../assets/trpost.jpg";
       style="max-width: 100%; height: auto;"
     />
   </div>
-
-
-  <style>
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 3.5rem;
-    }
-    .socials a {
-      color: #f5f5f5;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    .socials a:hover {
-      color: #cc0000;
-    }
-    .socials ion-icon {
-      transition: color 0.3s ease;
-    }
-  </style>
-  <script
-    type="module"
-    src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"
-  ></script>
-  <script
-    nomodule
-    src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
 </MainLayout>
+
+<style>
+  .socials {
+    display: flex;
+    justify-content: center;
+    gap: 3.5rem;
+  }
+  .socials a {
+    color: #f5f5f5;
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .socials a:hover {
+    color: #cc0000;
+  }
+  .socials ion-icon {
+    transition: color 0.3s ease;
+  }
+</style>
+<script
+  type="module"
+  src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.esm.js"></script>
+<script
+  nomodule
+  src="https://unpkg.com/ionicons@7.4.0/dist/ionicons/ionicons.js"></script>
