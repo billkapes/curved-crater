@@ -1,11 +1,11 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Hero from "../components/Hero.astro";
 import HeroNew from "../components/HeroNew.astro";
 import { Image } from "astro:assets";
 import flhpost from "../assets/flhpost.jpg";
 import trhpost from "../assets/trpost.jpg";
 import cimockup from "../assets/cimockup.jpg";
+import dpmockup from "../assets/dpmockup.jpg";
 ---
 
 <MainLayout title="Home | John Blanchard Jefferson">
@@ -49,7 +49,14 @@ import cimockup from "../assets/cimockup.jpg";
   </div>
 
   <br />
-
+  <div style="display: flex; justify-content: center;">
+    <Image
+      src={dpmockup}
+      alt="Crooked Idols Available Now"
+      style="max-width: 100%; height: auto;"
+    />
+  </div>
+  <br />
   <div style="display: flex; justify-content: center;">
     <Image
       src={cimockup}

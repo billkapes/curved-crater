@@ -61,7 +61,7 @@ export const books = [
   {
     slug: "drug-payback",
     title: "Drug Payback",
-    image: "/books/coverplaceholder.png",
+    image: "/books/dpcover.jpg",
     description: "In the quiet town where everyone knows everyone's business, private investigator Dave Harper never expected to be pulled into a life-altering conspiracy.",
     longDescription: `
           In the quiet town where everyone knows everyone's business, private investigator Dave Harper never expected to be pulled into a life-altering conspiracy. But when his niece Emily dies from what officials call "just another fentanyl overdose," Dave's instincts tell him something doesn't add up. 
@@ -76,7 +76,7 @@ export const books = [
 
           From small-town America to the shadowy corners of Southeast Asia, "Drug Payback" is a heart-pounding thriller about one man's relentless quest for justice in a world where pharmaceutical greed, corruption, and indifference to human suffering have become the prescription of choice. It's a story that asks: When the system fails, what price are you willing to pay for justice? 
         `,
-    buyLink: "unavailable",
+    buyLink: "https://www.amazon.com/dp/B0F999XR7S",
     link: "/books/drug-payback",
   },
   
