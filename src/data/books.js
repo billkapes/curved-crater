@@ -85,15 +85,15 @@ export const books = [
     image: "/books/tchtcover.jpg",
     description: "When retired police detective Hank Rogers moved to Chester House senior living community with his wife Romona, he thought his days of solving crimes were behind him.",
     longDescription: `
-          When retired police detective Hank Rogers moved to Chester House senior living community with his wife Romona, he thought his days of solving crimes were behind him. But when residents begin dying at an alarming rate—four deaths in a single month—Hank&#39;s investigative instincts refuse to stay retired.
+          When retired police detective Hank Rogers moved to Chester House senior living community with his wife Romona, he thought his days of solving crimes were behind him. But when residents begin dying at an alarming rate—four deaths in a single month—Hank's investigative instincts refuse to stay retired.
 
           What begins as natural deaths among elderly residents soon reveals a more sinister pattern. Medication discrepancies, intimidated staff members, and a charming resident offering too-good-to-be-true investment advice all point to something far more dangerous than the peaceful retirement Hank and Romona had envisioned.
 
-          As Hank digs deeper into Chester House&#39;s secrets, he uncovers a web of financial fraud, drug theft, and carefully orchestrated murders designed to look like natural deaths. But the closer he gets to the truth, the more dangerous it becomes for everyone in the community—including his own wife.
+          As Hank digs deeper into Chester House's secrets, he uncovers a web of financial fraud, drug theft, and carefully orchestrated murders designed to look like natural deaths. But the closer he gets to the truth, the more dangerous it becomes for everyone in the community—including his own wife.
 
           With the help of a young desk clerk and despite the concerns of local law enforcement, Hank must navigate a complex criminal conspiracy that threatens not just Chester House, but senior communities across the region. The predator hiding among them is clever, ruthless, and willing to kill anyone who gets too close to the truth.
 
-          Set against the backdrop of a close-knit retirement community where residents find new romance, face family conflicts, and support each other through crisis, The Chester House Chronicles is a gripping mystery that explores how evil can hide behind the most helpful facades—and how a community united can overcome even the most calculating predators.
+          Set against the backdrop of a close-knit retirement community where residents find new romance, face family conflicts, and support each other through crisis, The Chester House Troubles is a gripping mystery that explores how evil can hide behind the most helpful facades—and how a community united can overcome even the most calculating predators.
           
           Perfect for fans of cozy mysteries with darker edges, this novel combines the investigative expertise of a seasoned detective with the intimate dynamics of a senior living community where trust becomes a matter of life and death.
         `,
