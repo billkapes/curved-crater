@@ -30,6 +30,10 @@ if (!book) {
           Buy Now
           <ion-icon size="medium" name="logo-amazon" style="position: relative; top: 4px;"></ion-icon>
         </a>
+        <a href={`https://www.amazon.com/review/create-review?asin=${book.ASIN}`} class="buy-button" target="_blank" class="btn-review">
+          Leave a Review on Amazon ⭐
+        </a>
+
       ) : (
         <p></p>
       )}

@@ -17,6 +17,7 @@ export const books = [
       `,
     buyLink: "https://www.amazon.com/Flight-Level-Heist-Blanchard-Jefferson/dp/B0F1LKH8HH/",
     link: "/books/flight-level-heist",
+    ASIN: "B0F1LKH8HH",
   },
   {
     slug: "timid-revenge",
@@ -38,6 +39,7 @@ export const books = [
         `,
     buyLink: "https://www.amazon.com/Timid-Revenge-John-Blanchard-Jefferson-ebook/dp/B0F8CT9CPZ",
     link: "/books/timid-revenge",
+    ASIN: "B0F8CT9CPZ",
   },
   {
     slug: "crooked-idols",
@@ -57,6 +59,7 @@ export const books = [
         `,
     buyLink: "https://www.amazon.com/Crooked-Idols-Seth-McKee-Jr-ebook/dp/B0F925D574",
     link: "/books/crooked-idols",
+    ASIN: "B0F925D574",
   },
   {
     slug: "drug-payback",
@@ -78,6 +81,7 @@ export const books = [
         `,
     buyLink: "https://www.amazon.com/dp/B0F999XR7S",
     link: "/books/drug-payback",
+    ASIN: "B0F999XR7S",
   },
     {
     slug: "the-chester-house-troubles",
@@ -99,5 +103,6 @@ export const books = [
         `,
     buyLink: "https://www.amazon.com/Chester-House-Troubles-Blanchard-Jefferson-ebook/dp/B0FBMMPBFB",
     link: "/books/the-chester-house-troubles",
+    ASIN: "B0FBMMPBFB",
   },
 ];

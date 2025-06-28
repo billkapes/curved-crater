@@ -16,6 +16,41 @@ import { books } from '../data/books';
   </section>
 </MainLayout>
 
+<script is:inline>
+  if (!localStorage.getItem('reviewPopupShown')) {
+    window.addEventListener('DOMContentLoaded', () => {
+      const popup = document.createElement('div');
+      popup.style.position = 'fixed';
+      popup.style.left = 0;
+      popup.style.top = 0;
+      popup.style.width = '100vw';
+      popup.style.height = '100vh';
+      popup.style.background = 'rgba(0,0,0,0.4)';
+      popup.style.display = 'flex';
+      popup.style.alignItems = 'center';
+      popup.style.justifyContent = 'center';
+      popup.style.zIndex = 1000;
+
+      popup.innerHTML = `
+        <div style="background:#0a2342;padding:2rem;border-radius:8px;max-width:90vw;box-shadow:0 2px 16px rgba(0,0,0,0.2);text-align:center;color:#f3f6fa;">
+          <h2 style=\"color:#f3f6fa;\">Enjoying the books?</h2>
+          <p style=\"color:#e0e6ef;\">If you’ve read one of John Blanchard Jefferson’s books, please consider leaving a review on Amazon. Your feedback helps others discover these stories!</p>
+          <a href=\"https://www.amazon.com/stores/John-Blanchard-Jefferson/author/B0F1F13GLY\" target=\"_blank\" rel=\"noopener\" style=\"color:#ffd700;text-decoration:underline;\">Leave a review</a>
+          <br />
+          <button id=\"closeReviewPopup\" style=\"margin-top:1rem;background:#183661;color:#fff;border:none;padding:0.5rem 1.2rem;border-radius:4px;cursor:pointer;\">Close</button>
+        </div>
+      `;
+
+      document.body.appendChild(popup);
+
+      document.getElementById('closeReviewPopup').onclick = function() {
+        popup.remove();
+        localStorage.setItem('reviewPopupShown', 'true');
+      };
+    });
+  }
+</script>
+
 <style>
 h1 {
   text-align: center;
